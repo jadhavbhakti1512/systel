@@ -14,7 +14,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
           {/* first section */}
           <div className="space-y-4 max-w-[300px]">
-            <h1 className="text-2xl font-bold">Systel Computer Centre</h1>
+          <div>
+          <a href="#Home" className="font-bold text-2xl">
+            Systel Computer Centre
+          </a>
+        </div>
             <p className="text-dark">
             Empowering through Computer Education since 2000.
             </p>

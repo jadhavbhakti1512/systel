@@ -3,47 +3,31 @@ import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
 
 const NavbarMenu = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-  },
-  {
-    id: 2,
-    title: "Courses",
-    link: "#",
-  },
-  {
-    id: 3,
-    title: "About Us",
-    link: "#",
-  },
-  {
-    id: 4,
-    title: "Our Team",
-    link: "#",
-  },
-  {
-    id: 5,
-    title: "Contact Us",
-    link: "#",
-  },
+  { id: 1, title: "Home", path: "#Home" },
+  { id: 2, title: "Courses", path: "#Courses" },
+  { id: 3, title: "About Us", path: "#About" },
+  { id: 4, title: "Our Team", path: "#Team" },
+  { id: 5, title: "Contact Us", path: "#Contact" },
 ];
+
 const Navbar = () => {
   return (
-    <nav className="relative z-20">
+    <nav className="fixed top-0 w-full bg-white shadow z-50">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        className="container py-10 flex justify-between items-center"
+        className="container py-6 flex justify-between items-center"
       >
         {/* Logo section */}
         <div>
-          <h1 className="font-bold text-2xl">Systel Computer Centre</h1>
+          <a href="#Home" className="font-bold text-2xl">
+            Systel Computer Centre
+          </a>
         </div>
+
         {/* Menu section */}
         <div className="hidden lg:block">
-          <ul className="flex items-center gap-3">
+          <ul className="flex items-center gap-6">
             {NavbarMenu.map((menu) => (
               <li key={menu.id}>
                 <a
@@ -57,6 +41,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
+
         {/* Mobile Hamburger menu section */}
         <div className="lg:hidden">
           <IoMdMenu className="text-4xl" />
