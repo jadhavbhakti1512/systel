@@ -1,9 +1,9 @@
-import Hero from "./Components/Hero/Hero";
-import Banner from "./Components/Banner/Banner";
-import Services from "./Components/Services/Services"
-import Subscribe from "./Components/Subscribe/Subscribe";
-import Footer from "./Components/Footer/Footer";
-import Banner2 from "./Components/Banner/Banner2";
+import Hero from "./component/Hero/Hero";
+import Banner from "./component/Banner/Banner";
+import Services from "./component/Services/Services"
+import Subscribe from "./component/Subscribe/Subscribe";
+import Footer from "./component/Footer/Footer";
+import Banner2 from "./component/Banner/Banner2";
 
 const App = () => {
   return (
