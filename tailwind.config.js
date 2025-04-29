@@ -23,6 +23,9 @@ export default {
           "2xl": "6rem",
         },
       },
+      scrollBehavior: {
+        smooth: "smooth",
+      },
     },
   },
   plugins: [],
