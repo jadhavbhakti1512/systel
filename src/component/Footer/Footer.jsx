@@ -48,17 +48,21 @@ const Footer = () => {
               <h1 className="text-2xl font-bold">Links</h1>
               <div className="text-dark">
                 <ul className="space-y-2 text-lg">
+                <li className="cursor-pointer hover:text-secondary duration-200">
+                  <a href="#Home">Home</a>
+                </li>
+
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Home
+                    <a href="#Courses">Courses</a>
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Courses
+                    <a href="#About">About Us</a>
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    About
+                    <a href="#Team">Our Team</a>
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Contact
+                    <a href="#Contact">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -85,7 +89,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/systelskr.satish?igsh=MXZ4djhlazd1dWNxOQ==">
                 <FaInstagram className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
               </a>
-              <a href="https://thecodingjourney.com/">
+              <a href="https://systel.vercel.app/">
                 <TbWorldWww className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
               </a>
               <a href="https://youtube.com/@rksystelcomputer7314?si=JhKXVuLrlqiZNKk_">

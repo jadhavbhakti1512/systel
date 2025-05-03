@@ -34,9 +34,9 @@ export default function Contact() {
   return (
     <section id="Contact" className="max-w-2xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
-      <p className="text-dark2">
+      <p className="text-gray-800 pb-10">
         Have some general queries?
-        We are here to help you!
+        <br></br>We are here to help you!
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input

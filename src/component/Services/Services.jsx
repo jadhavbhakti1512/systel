@@ -77,7 +77,7 @@ const Services = () => {
         <h1 className="text-4xl font-bold text-left pb-3">
           Courses in Demand
         </h1>
-        <p className="text-dark2 pb-10">
+        <p className="text-gray-800 pb-10">
           Stand out by taking up courses to skill, reskill and upskill.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8">

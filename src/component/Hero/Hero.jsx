@@ -39,7 +39,7 @@ const Hero = () => {
               animate="animate"
                           >
                 <div>
-                <p className="text-dark2 text-2xl">We are</p>
+                <p className="text-gray-800 text-2xl">We are,</p>
                 <h1 className="text-5xl font-bold !leading-snug">
                 Creating a Knowledge Lit World
                 </h1>
