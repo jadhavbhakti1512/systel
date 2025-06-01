@@ -7,7 +7,6 @@ import Subscribe from "./component/Subscribe/Subscribe";
 import Footer from "./component/Footer/Footer";
 import Banner2 from "./component/Banner/Banner2";
 import Team1 from "./component/Team/Team1";
-import Team2 from "./component/Team/Team2";
 
 
 const App = () => {
@@ -21,7 +20,6 @@ const App = () => {
         <Banner />
         <Banner2 />
         <Team1/>
-        <Team2/>
         <Subscribe />
         <Footer />
       </div>

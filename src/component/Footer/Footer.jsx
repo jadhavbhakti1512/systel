@@ -30,16 +30,16 @@ const Footer = () => {
               <div className="text-dark">
                 <ul className="space-y-2 text-lg">
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Web Development
+                    <a href="#Courses">MS-CIT</a>
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Software Development
+                    <a href="#Courses">KLiC</a>
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    Apps Development
+                    <a href="#Courses">Knowledge empowerment</a>
                   </li>
                   <li className="cursor-pointer hover:text-secondary duration-200">
-                    E-learning
+                    <a href="#Courses">Digital Employability</a>
                   </li>
                 </ul>
               </div>

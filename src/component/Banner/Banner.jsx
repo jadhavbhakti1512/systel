@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BannerPng from "../../assets/education.png";
-import { GrUserExpert } from "react-icons/gr";
-import { MdOutlineAccessTime } from "react-icons/md";
-import { FaBookReader } from "react-icons/fa";
-import { FadeUp } from "../Hero/Hero";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Banner = () => {
+  const skillWords = ["Skill?", "Upskill?", "Reskill?"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % skillWords.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const wordVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -20 },
+  };
+
   return (
     <section>
-      <div className="container py-14 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8 space-y-6 md:space-y-0">
+      <div className="container py-14 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Banner Image */}
         <div className="flex justify-center items-center">
           <motion.img
@@ -18,54 +31,58 @@ const Banner = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
             src={BannerPng}
-            alt=""
+            alt="Education Banner"
             className="w-[350px] md:max-w-[450px] object-cover drop-shadow"
           />
         </div>
+
         {/* Banner Text */}
         <div className="flex flex-col justify-center">
-          <div className="text-center md:text-left space-y-12">
+          <div className="text-center md:text-left space-y-6">
             <motion.h1
               initial={{ opacity: 0, scale: 0.5 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold !leading-snug"
+              className="text-3xl md:text-4xl font-bold !leading-snug inline-flex items-center"
             >
-              The World's Leading Online learning Platform
+              Looking to&nbsp;
+              <span
+                className="text-orange-500 relative inline-block"
+                style={{
+                  width: "100px",
+                  height: "1.2em",
+                  position: "relative",
+                  verticalAlign: "middle",
+                }}
+              >
+                <AnimatePresence mode="wait" initial={false}>
+                  <motion.span
+                    key={skillWords[index]}
+                    variants={wordVariants}
+                    initial="initial"
+                    animate="animate"
+                    exit="exit"
+                    transition={{ duration: 0.5 }}
+                    style={{
+                      position: "absolute",
+                      left: 0,
+                      right: 0,
+                      textAlign: "center",
+                    }}
+                  >
+                    {skillWords[index]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </motion.h1>
-            <div className="flex flex-col gap-6">
-              <motion.div
-                variants={FadeUp(0.2)}
-                initial="initial"
-                whileInView={"animate"}
-                viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
-              >
-                <FaBookReader className="text-2xl" />
-                <p className="text-lg">10,000+ Courses</p>
-              </motion.div>
-              <motion.div
-                variants={FadeUp(0.4)}
-                initial="initial"
-                whileInView={"animate"}
-                viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
-              >
-                <GrUserExpert className="text-2xl" />
-                <p className="text-lg">Expert Instruction</p>
-              </motion.div>
-              <motion.div
-                variants={FadeUp(0.6)}
-                initial="initial"
-                whileInView={"animate"}
-                viewport={{ once: true }}
-                className="flex items-center gap-4 p-6 bg-[#f4f4f4] rounded-2xl hover:bg-white duration-300 hover:shadow-2xl"
-              >
-                <MdOutlineAccessTime className="text-2xl" />
-                <p className="text-lg">Lifetime Access</p>
-              </motion.div>
-            </div>
+
+            <p className="text-black text-xl">
+  You have come to the right place. <br />
+  Let the search for the right course begin!
+</p>
+
+            
           </div>
         </div>
       </div>
