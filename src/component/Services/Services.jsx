@@ -1,7 +1,7 @@
 import React from "react"; 
 import { motion } from "framer-motion";
 import MSCIT from "../../assets/MSCIT.png";
-import DeepWebp from "../../assets/deep.webp";
+import klic from "../../assets/klic.webp";
 import iLike from "../../assets/ilike.webp";
 import DeepPng from "../../assets/deep.webp";
 
@@ -16,7 +16,7 @@ const programs = [
     title: "KNOWLEDGE LIT CAREERS",
     subtitle: "MKCL KLiC Courses",
     description: "Gateway to Knowledge Lit Careers",
-    image: DeepWebp,
+    image: klic,
     delay: 0.3,
   },
   {
