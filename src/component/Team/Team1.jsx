@@ -89,7 +89,7 @@ const Banner = () => {
 
       {/* Person 2: Image Right */}
       <TeamMember
-        name="Sanjay D Chaudhari"
+        name="Sanjay D. Chaudhari"
         description="Expert in marketing and business strategy with over a decade of experience. He has led multiple successful campaigns and mentoring initiatives, helping teams achieve growth and innovation in competitive markets."
         image={BannerPng2}
         imageRight={true}
