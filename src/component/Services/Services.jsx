@@ -11,6 +11,7 @@ const programs = [
     subtitle: "MS-CIT",
     image: MSCIT,
     delay: 0.2,
+    link: "https://www.mkcl.org/#/courses/ms-cit"
   },
   {
     title: "KNOWLEDGE LIT CAREERS",
@@ -18,6 +19,7 @@ const programs = [
     description: "Gateway to Knowledge Lit Careers",
     image: klic,
     delay: 0.3,
+    link: "https://www.mkcl.org/#/courses"
   },
   {
     title: "KNOWLEDGE EMPOWERMENT",
@@ -25,6 +27,7 @@ const programs = [
     description: "",
     image: iLike,
     delay: 0.4,
+    link: "https://www.mkcl.org/#/solutions/ilike"
   },
   {
     title: "DIGITAL EMPLOYABILITY",
@@ -32,6 +35,7 @@ const programs = [
     description: "Digital Employability Enhancement Program",
     image: DeepPng,
     delay: 0.5,
+    link: "https://www.mkcl.org/#/solutions/deep"
   },
 ];
 
@@ -58,8 +62,14 @@ const Services = () => {
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {programs.map((program, index) => (
-            <motion.div
+            <a
               key={index}
+              href={program.link || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+            <motion.div
               variants={SlideLeft(program.delay)}
               initial="initial"
               whileInView="animate"
@@ -135,6 +145,7 @@ const Services = () => {
                 <p className="text-sm text-gray-600">{program.description}</p>
               )}
             </motion.div>
+            </a>
           ))}
         </div>
       </div>
