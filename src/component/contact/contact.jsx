@@ -14,7 +14,7 @@ export default function Contact() {
     setStatus("Sending...");
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("http://localhost:5000/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -36,7 +36,7 @@ export default function Contact() {
       <h1 className="text-3xl font-bold mb-6">Contact Us</h1>
       <p className="text-gray-800 pb-10">
         Have some general queries?
-        <br></br>We are here to help you!
+        <br />We are here to help you!
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
