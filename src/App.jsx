@@ -7,6 +7,7 @@ import Footer from "./component/Footer/Footer";
 import Banner2 from "./component/Banner/Banner2";
 import Team1 from "./component/Team/Team1";
 import Contact from "./component/contact/contact";
+import Gallery from "./component/Gallery/Gallery";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Banner />
         <Banner2 />
         <Team1 />
+        <Gallery />
         <Contact /> 
         <Footer />
       </div>
