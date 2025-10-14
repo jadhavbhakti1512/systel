@@ -61,7 +61,7 @@ const Gallery = () => {
           .animate-scroll {
             display: flex;
             width: calc(200%);
-            animation: scroll 30s linear infinite;
+            animation: scroll 12s linear infinite;
           }
 
           .animate-scroll:hover {
