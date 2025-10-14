@@ -37,10 +37,10 @@ const Gallery = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Gradient overlay (always visible, darker on hover) */}
+              {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
 
-              {/* Text content (always visible) */}
+              {/* Text */}
               <div className="absolute bottom-5 left-5 right-5 text-white transition-all duration-500 group-hover:bottom-8">
                 <h3 className="text-xl font-semibold drop-shadow-md">{img.title}</h3>
                 <p className="text-base text-gray-200 mt-1 drop-shadow-md">{img.desc}</p>
@@ -68,10 +68,11 @@ const Gallery = () => {
             animation-play-state: paused;
           }
 
+          /* 🔹 Larger images on mobile */
           @media (max-width: 768px) {
             .animate-scroll > div {
-              width: 250px;
-              height: 170px;
+              width: 320px;
+              height: 220px;
             }
           }
         `}
