@@ -6,11 +6,11 @@ import g4 from "../../assets/g4.jpeg";
 import g5 from "../../assets/g5.jpeg";
 
 const images = [
-  { src: g1, title: "Office 1", desc: "Our modern workspace" },
-  { src: g2, title: "Office 2", desc: "Collaboration in action" },
-  { src: g3, title: "Team", desc: "Our talented team" },
-  { src: g4, title: "Projects", desc: "Innovative solutions" },
-  { src: g5, title: "Events", desc: "Team building moments" },
+  { src: g1, title: "Achievement Award", desc: "Honored for achieving the highest number of admissions." },
+  { src: g2, title: "Collaboration Award", desc: "Recognized for outstanding teamwork and partnership." },
+  { src: g3, title: "Office Pride", desc: "Celebrating our spirit under the Indian flag." },
+  { src: g4, title: "Innovative Projects", desc: "Delivering creative and impactful solutions." },
+  { src: g5, title: "Team Events", desc: "Building stronger bonds through fun and collaboration." },
 ];
 
 const Gallery = () => {
@@ -18,34 +18,39 @@ const Gallery = () => {
     <section className="py-16 bg-gray-50 overflow-hidden">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Gallery</h2>
-        <p className="text-gray-600 max-w-xl mx-auto">
+        <p className="text-gray-600 max-w-xl mx-auto text-xl">
           Explore our workplace, team, and events. Every picture tells a story of our journey.
         </p>
       </div>
 
       <div className="relative w-full overflow-hidden">
-        <div className="flex animate-scroll gap-6 items-center">
+        <div className="flex animate-scroll gap-8 items-center">
           {[...images, ...images].map((img, index) => (
             <div
               key={index}
-              className="w-[300px] h-[200px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg relative cursor-pointer transition-transform duration-500 ease-in-out hover:scale-110 hover:z-50 hover:rotate-1"
+              className="w-[400px] h-[260px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg relative group cursor-pointer transition-all duration-500 ease-in-out hover:z-50"
             >
+              {/* Image */}
               <img
                 src={img.src}
                 alt={img.title}
-                className="w-full h-full object-cover transition-transform duration-500"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              {/* Overlay content */}
-              <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 hover:opacity-100 flex flex-col justify-center items-center text-white transition-opacity duration-300">
-                <h3 className="text-lg font-semibold">{img.title}</h3>
-                <p className="text-sm mt-1">{img.desc}</p>
+
+              {/* Gradient overlay (always visible, darker on hover) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-500"></div>
+
+              {/* Text content (always visible) */}
+              <div className="absolute bottom-5 left-5 right-5 text-white transition-all duration-500 group-hover:bottom-8">
+                <h3 className="text-xl font-semibold drop-shadow-md">{img.title}</h3>
+                <p className="text-base text-gray-200 mt-1 drop-shadow-md">{img.desc}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Tailwind custom animation */}
+      {/* Scroll Animation */}
       <style>
         {`
           @keyframes scroll {
@@ -56,7 +61,7 @@ const Gallery = () => {
           .animate-scroll {
             display: flex;
             width: calc(200%);
-            animation: scroll 25s linear infinite;
+            animation: scroll 30s linear infinite;
           }
 
           .animate-scroll:hover {
@@ -65,8 +70,8 @@ const Gallery = () => {
 
           @media (max-width: 768px) {
             .animate-scroll > div {
-              width: 200px;
-              height: 150px;
+              width: 250px;
+              height: 170px;
             }
           }
         `}
