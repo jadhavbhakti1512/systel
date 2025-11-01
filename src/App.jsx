@@ -8,6 +8,7 @@ import Banner2 from "./component/Banner/Banner2";
 import Team1 from "./component/Team/Team1";
 import Contact from "./component/contact/contact";
 import Gallery from "./component/Gallery/Gallery";
+import Address from "./component/Address/AddressSection";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Team1 />
         <Gallery />
         <Contact /> 
+        <Address />
         <Footer />
       </div>
     </main>

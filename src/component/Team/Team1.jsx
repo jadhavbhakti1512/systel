@@ -78,6 +78,11 @@ const Banner = () => {
   return (
     <section id="Team">
       <div className="text-3xl text-center font-bold mb-0">Meet our team!</div>
+      <div>
+            <p className="text-dark text-center mt-3 mb-0 text-l">
+            Empowering through Computer Education since 1999.
+            </p>
+      </div>
 
       {/* Person 1: Image Left */}
       <TeamMember

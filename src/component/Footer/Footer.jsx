@@ -11,64 +11,49 @@ const Footer = () => {
         whileInView={{ opacity: 1, y: 0 }}
         className="container"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-4">
-          {/* first section */}
-          <div className="space-y-4 max-w-[300px]">
-          <div>
-          <a href="#Home" className="font-bold text-2xl">
-            Systel Computer Centre
-          </a>
-        </div>
-            <p className="text-dark">
-            Empowering through Computer Education since 2000.
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 md:gap-8">
+          {/* Courses Section */}
+          <div className="space-y-4">
+            <h1 className="text-2xl font-bold">Courses</h1>
+            <ul className="space-y-2 text-lg text-dark">
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Courses">MS-CIT</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Courses">KLiC</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Courses">Knowledge Empowerment</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Courses">Digital Employability</a>
+              </li>
+            </ul>
           </div>
-          {/* second section */}
-          <div className="grid grid-cols-2 gap-10">
-            <div className="space-y-4">
-              <h1 className="text-2xl font-bold">Courses</h1>
-              <div className="text-dark">
-                <ul className="space-y-2 text-lg">
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Courses">MS-CIT</a>
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Courses">KLiC</a>
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Courses">Knowledge empowerment</a>
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Courses">Digital Employability</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h1 className="text-2xl font-bold">Links</h1>
-              <div className="text-dark">
-                <ul className="space-y-2 text-lg">
-                <li className="cursor-pointer hover:text-secondary duration-200">
-                  <a href="#Home">Home</a>
-                </li>
 
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Courses">Courses</a>
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#About">About Us</a>
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Team">Our Team</a>
-                  </li>
-                  <li className="cursor-pointer hover:text-secondary duration-200">
-                    <a href="#Contact">Contact Us</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          {/* Links Section */}
+          <div className="space-y-4">
+            <h1 className="text-2xl font-bold">Links</h1>
+            <ul className="space-y-2 text-lg text-dark">
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Home">Home</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Courses">Courses</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#About">About Us</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Team">Our Team</a>
+              </li>
+              <li className="cursor-pointer hover:text-secondary duration-200">
+                <a href="#Contact">Contact Us</a>
+              </li>
+            </ul>
           </div>
-          {/* third section */}
+
+          {/* Get In Touch Section */}
           <div className="space-y-4 max-w-[300px]">
             <h1 className="text-2xl font-bold">Get In Touch</h1>
             <div className="flex items-center">
@@ -81,7 +66,8 @@ const Footer = () => {
                 Go
               </button>
             </div>
-            {/* social icons */}
+
+            {/* Social Icons */}
             <div className="flex space-x-6 py-3">
               <a href="https://wa.me/919923181557">
                 <FaWhatsapp className="cursor-pointer hover:text-primary hover:scale-105 duration-200" />
@@ -98,8 +84,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
+
+        {/* Footer Bottom Text */}
         <p className="text-dark text-center pt-10">
-            @ 2025 Systel Computer Centre. All Rights Reserved.
+          © 2025 Systel Computer Centre. All Rights Reserved.
         </p>
       </motion.div>
     </footer>
